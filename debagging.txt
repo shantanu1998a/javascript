@@ -1,0 +1,28 @@
+ – “Step”: run the next command, hotkey F9.
+Run the next statement. If we click it now, alert will be shown.
+
+Clicking this again and again will step through all script statements one by one.
+
+ – “Step over”: run the next command, but don’t go into a function, hotkey F10.
+Similar to the previous the “Step” command, but behaves differently if the next statement is a function call. That is: not a built-in, like alert, but a function of our own.
+
+The “Step” command goes into it and pauses the execution at its first line, while “Step over” executes the nested function call invisibly, skipping the function internals.
+
+The execution is then paused immediately after that function.
+
+That’s good if we’re not interested to see what happens inside the function call.
+
+ – “Step into”, hotkey F11.
+That’s similar to “Step”, but behaves differently in case of asynchronous function calls. If you’re only starting to learn JavaScript, then you can ignore the difference, as we don’t have asynchronous calls yet.
+
+For the future, just note that “Step” command ignores async actions, such as setTimeout (scheduled function call), that execute later. The “Step into” goes into their code, waiting for them if necessary. See DevTools manual for more details.
+
+ – “Step out”: continue the execution till the end of the current function, hotkey Shift+F11.
+Continue the execution and stop it at the very last line of the current function. That’s handy when we accidentally entered a nested call using , but it does not interest us, and we want to continue to its end as soon as possible.
+
+ – enable/disable all breakpoints.
+That button does not move the execution. Just a mass on/off for breakpoints.
+
+ – enable/disable automatic pause in case of an error.
+When enabled, and the developer tools is open, a script error automatically pauses the execution. Then we can analyze variables to see what went wrong. 
+So if our script dies with an error, we can open debugger, enable this option and reload the page to see where it dies and what’s the context at that moment.
